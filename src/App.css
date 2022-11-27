@@ -36,3 +36,123 @@
     transform: rotate(360deg);
   }
 }
+
+
+@media  (max-width: 768px) {
+  .b{
+ align-self: end;
+transition: 1s;
+    
+  }
+  
+}
+.carousel-caption{
+  position: absolute;
+  bottom: 200px;
+  font-size: 50px;
+  text-shadow: 1px 1px #282c34;
+}
+.carousel-caption:hover{
+ transform: rotateZ('100');
+}
+@keyframes anim-stars {
+  from {
+      transform: rotateY(0);
+  }
+  to {
+      transform: rotateY(3.142rad);
+  }
+}
+.by{
+
+  position: relative;
+ 
+}
+
+.by::before{
+  content: '';
+  position: absolute;
+  border: 0ch;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ z-index: -1;
+
+  background-color: blue;
+  
+}
+
+.by:hover{
+  animation: anim-stars 1s linear infinite
+}
+.bo{
+  position: relative;
+}
+
+.bo::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  background-color: red;
+  transition: 2s;
+}
+
+.bb{
+  position: relative;
+  transition: 1s;
+
+}
+.bb:hover{
+  box-shadow: inset 3em 0 0 0 darkgrey;
+
+}
+
+.bo:hover{
+  box-shadow: 0 0.5em 0.5em 5em ;
+  transition: 1s;
+  transform: translateY(-0.25em);
+}
+.bl{
+  position: relative;
+  z-index: 1;
+}
+.bl::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+transform: scaleX(0);
+  background-color: blue;
+
+}
+
+.bl:hover:before{
+  transform: scaleX(1);
+  transition: 1s;
+  
+}
+.bl{
+  transition: color 1s;
+}
+.bl:hover{
+  color: white;
+}
+
+
+
+/* 
+xs no media necessary
+sm @media min width 576
+md @media min width 768px
+lg @media min width 992px
+xl @media min width 1200px
+*/
